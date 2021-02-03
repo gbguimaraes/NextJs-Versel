@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
@@ -40,6 +41,9 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+/node_modules
+/.pnp
+.pnp.js
 
 # TypeScript v1 declaration files
 typings/
@@ -77,10 +81,14 @@ typings/
 
 # Next.js build output
 .next
+/.next/
+/out/
 
 # Nuxt.js build / generate output
 .nuxt
 dist
+/build
+/coverage
 
 # Gatsby files
 .cache/
@@ -100,5 +108,14 @@ dist
 # DynamoDB Local files
 .dynamodb/
 
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
 # TernJS port file
 .tern-port
+
+# misc
+.DS_Store
